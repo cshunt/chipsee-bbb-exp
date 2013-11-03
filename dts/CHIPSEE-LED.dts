@@ -1,0 +1,69 @@
+/*
+*	CHIPSEE BeagleBone Black Expansion V1
+*	Device Tree: LED
+*	Date:        03.11.2013
+*	Author:      Oliver Schlag <oliver.schlag@gmail.com>
+*/
+/dts-v1/;
+/plugin/;
+
+/ {
+        compatible = "ti,beaglebone", "ti,beaglebone-black";
+
+        /* identification */
+        part-number = "CHIPSEE-LED";
+        version = "00A0";
+
+        /* state the resources this cape uses */
+        exclusive-use = "P8.10", "gpio2_4";
+
+        fragment@0 {
+                target = <&am33xx_pinmux>;
+                __overlay__ {
+                        chipsee_led_d1: pinmux_chipsee_led_d1 {
+                                pinctrl-single,pins = <
+                                        0x9C 0xf
+                                >;
+                        };
+                        chipsee_led_d2: pinmux_chipsee_led_d2 {
+                                pinctrl-single,pins = <
+                                        0x98 0xf
+                                >;
+                        };
+                };
+        };
+
+        fragment@1 {
+                target = <&ocp>;
+                __overlay__ {
+
+                        chipsee_led_d1_helper {
+                                compatible = "gpio-leds";
+                                pinctrl-names = "default";
+                                pinctrl-0 = <&chipsee_led_d1>;
+                                
+                                leds-d1 {
+                                        label = "chipsee:led:d1";
+                                        gpios = <&gpio3 5 0>;
+                                        linux,default-trigger = "none";
+                                        default-state = "off";
+                                };
+                        };
+
+                        chipsee_led_d2_helper {
+                                compatible = "gpio-leds";
+                                pinctrl-names = "default";
+                                pinctrl-0 = <&chipsee_led_d2>;
+                                
+                                leds-d2 {
+                                        label = "chipsee:led:d2";
+                                        gpios = <&gpio3 4 0>;
+                                        linux,default-trigger = "none";
+                                        default-state = "off";
+                                };
+                        };
+                        
+                };
+        };
+
+};
