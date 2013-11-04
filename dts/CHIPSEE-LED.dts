@@ -15,7 +15,7 @@
         version = "00A0";
 
         /* state the resources this cape uses */
-        exclusive-use = "P8.10", "gpio2_4";
+        exclusive-use = "P8.10", "P8.9", "gpio2_4", "gpio2_5";
 
         fragment@0 {
                 target = <&am33xx_pinmux>;

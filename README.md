@@ -34,5 +34,5 @@ The board has two front panel LED labeled D1 (blue) and D2 (green). After compil
 You can even set the triggers for these LED like you would do for the normal BeagleBone LED by inserting the trigger into the file trigger. For example to have the heartbeat at your green LED type:
 
 ```
-echo heartbeat > /sys/class/leds/chipsee\:led\:d2
+echo heartbeat > /sys/class/leds/chipsee\:led\:d2/trigger
 ```
