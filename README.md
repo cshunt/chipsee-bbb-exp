@@ -7,7 +7,7 @@ Devices on the cape
 ===================
 
 - [x] User LED's (see https://github.com/dl7tny/chipsee-bbb-exp#chipsee-leddts)
-- [ ] User Beeper
+- [x] User Buzzer (see https://github.com/dl7tny/chipsee-bbb-exp#chipsee-buzzerdts)
 - [ ] User Buttons
 - [ ] Accelerometer (ADXL345)
 - [ ] LC Display (DS90C385)
@@ -36,3 +36,22 @@ You can even set the triggers for these LED like you would do for the normal Bea
 ```
 echo heartbeat > /sys/class/leds/chipsee\:led\:d2/trigger
 ```
+
+CHIPSEE-BUZZER.dts
+==================
+
+The buzzer on the chipsee expansion is connected to Pin 8 of Header P8 and is working as a simple gpio pin. To configure the pin, compile and load the device tree overlay and then run the following commands:
+
+
+```
+echo 67 > /sys/class/gpio/export
+echo out > /sys/class/gpio/gpio67/direction
+```
+
+You can use the buzzer with the following commands
+```
+enable: echo 1 > /sys/class/gpio/gpio67/value
+disable: echo 0 > /sys/class/gpio/gpio67/value 
+```
+
+P.S. If you do not hear anything, then first remove the 'REMOVE AFTER WASHING' label and then push the buzzer soft against the board. The buzzer on my board was not soldered to the board correctly.
