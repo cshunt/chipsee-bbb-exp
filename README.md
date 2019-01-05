@@ -6,12 +6,12 @@ I try to develop some Device Tree Overlays for the Chipsee Expansion Board with 
 Devices on the cape
 ===================
 
-- [x] User LED's (see https://github.com/dl7tny/chipsee-bbb-exp#chipsee-leddts)
-- [x] User Buzzer (see https://github.com/dl7tny/chipsee-bbb-exp#chipsee-buzzerdts)
+- [ ] User LED's (see https://github.com/dl7tny/chipsee-bbb-exp#chipsee-leddts)
+- [ ] User Buzzer (see https://github.com/dl7tny/chipsee-bbb-exp#chipsee-buzzerdts)
 - [ ] User Buttons
 - [ ] Accelerometer (ADXL345)
-- [ ] LC Display (DS90C385)
-- [ ] Capacitive Touchscreen (FT5306DE4)
+- [x] LC Display (DS90C385)
+- [x] Capacitive Touchscreen (FT5306DE4)
 - [ ] Audio In and Out (TLV320AIC3106)
 - [ ] RS232
 - [ ] RS485
