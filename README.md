@@ -1,7 +1,7 @@
 chipsee-bbb-exp
 ===============
 
-I try to develop some Device Tree Overlays for the Chipsee Expansion Board with the 7" LCD, Touchscreen, Accelerometer, CAN and RS232 for the BeagleBone black.
+Working with CaptainStouf's github files I am expanding on a device tree for the beaglebone black to operate the 7in lcd,  The Device Tree Overlays is for the Chipsee Expansion Board with the 7" LCD, Touchscreen, Accelerometer, CAN and RS232 for the BeagleBone black. 1024x600 lcd, model EXP7H.
 
 Devices on the cape
 ===================
@@ -65,3 +65,8 @@ disable: echo 0 > /sys/class/gpio/gpio67/value
 ```
 
 P.S. If you do not hear anything, then first remove the 'REMOVE AFTER WASHING' label and then push the buzzer soft against the board. The buzzer on my board was not soldered to the board correctly.
+
+CHIPSEE-TOUCH_C.dts
+==================
+
+This device tree is based off the BB-BONE-4D7C-01-00A1.dts with changes from the older chipsee dtb file floating around that doesn't seem to compile. LCD is functioning, Touchscreen for capacitance touch is working x, y, were swapped and inverted, to get a good touch screen response, the size y is beyond the 600 pixel screen size.
