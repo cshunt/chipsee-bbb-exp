@@ -20,7 +20,17 @@ Devices on the cape
 
 Compiling
 =========
-To compile the dts files to the dtbo files, you need the device tree compiler, with patches for the BBB. Information about compiling and getting the compiler can be found at http://learn.adafruit.com/introduction-to-the-beaglebone-black-device-tree/compiling-an-overlay
+
+https://github.com/beagleboard/bb.org-overlays
+Copy to directory, dts source file should be located in /src/arm/
+while in main directory run "make", this will generate dtbo file, copy this file to /lib/firmware/ directory
+update /boot/uEnv.txt to include the new dtbo file, device tree overlay.
+there should be a line such as "uboot_overlay_addr0=/lib/firmware/CHIPSEE-TOUCH_C.dtbo"
+
+Previous reference - may be dated
+//To compile the dts files to the dtbo files, you need the device tree compiler, with patches for the BBB. Information about //compiling and getting the compiler can be found at http://learn.adafruit.com/introduction-to-the-beaglebone-black-device-//tree/compiling-an-overlay
+
+
 
 
 CHIPSEE-LED.dts
