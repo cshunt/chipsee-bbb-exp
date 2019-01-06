@@ -6,9 +6,9 @@ Working with CaptainStouf's github files I am expanding on a device tree for the
 Devices on the cape
 ===================
 
-- [ ] User LED's 
+- [x] User LED's 
 - [ ] User Buzzer 
-- [ ] User Buttons
+- [x] User Buttons
 - [ ] Accelerometer (ADXL345)
 - [x] LC Display (DS90C385)
 - [x] Capacitive Touchscreen (FT5306DE4)
