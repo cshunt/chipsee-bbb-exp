@@ -6,8 +6,8 @@ Working with CaptainStouf's github files I am expanding on a device tree for the
 Devices on the cape
 ===================
 
-- [ ] User LED's (see https://github.com/dl7tny/chipsee-bbb-exp#chipsee-leddts)
-- [ ] User Buzzer (see https://github.com/dl7tny/chipsee-bbb-exp#chipsee-buzzerdts)
+- [ ] User LED's 
+- [ ] User Buzzer 
 - [ ] User Buttons
 - [ ] Accelerometer (ADXL345)
 - [x] LC Display (DS90C385)
